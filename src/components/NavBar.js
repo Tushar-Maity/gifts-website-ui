@@ -8,15 +8,19 @@ const NavBar = () => {
     return (
         <NavBarContainer>
             <NavBarLeft>
-                <NavBarLeftItem><h4>Products</h4><FiChevronDown size="25px" style={{marginBottom: "-4px", marginLeft: "5px"}}/></NavBarLeftItem>
+                <NavBarLeftItem><h4>Products</h4>
+                    <FiChevronDown size="25px" style={{marginBottom: "-4px", marginLeft: "5px"}}/>
+                </NavBarLeftItem>
                 <NavBarLeftItem><h4>Collections</h4></NavBarLeftItem>
                 <NavBarLeftItem><h4>Gifts</h4></NavBarLeftItem>
                 <NavBarLeftItem><h4>Our Magazine</h4></NavBarLeftItem>
             </NavBarLeft>
 
             <NavBarRight>
-                <NavBarRightItem><AiOutlineSearch size="25px" style={{marginBottom: "-4px", marginLeft: "5px"}}/></NavBarRightItem>
-                <NavBarRightItem><h4>Log In</h4></NavBarRightItem>
+                <NavBarRightItem>
+                    <AiOutlineSearch size="25px" style={{marginBottom: "-4px", marginLeft: "5px", cursor: "pointer"}}/>
+                </NavBarRightItem>
+                <NavBarRightItem style={{cursor: "pointer"}}><h4>Log In</h4></NavBarRightItem>
                 <NavBarRightItem><Button content="SIGN UP" style="navbar-button"/></NavBarRightItem>
             </NavBarRight>
         </NavBarContainer>

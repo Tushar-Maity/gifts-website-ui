@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState} from 'react'
 import styled from 'styled-components'
 import Button from './Button';
 import Card from './Card';
@@ -7,13 +7,28 @@ import CardImage1 from "../images/card-image1.png"
 import CardImage2 from "../images/card-image2.png"
 
 const ContentContainer = () => {
+
+    const [headerName, setHeaderName] = useState('The gift of happiness')
+
+    const headerChangeHandler = () => {
+        if(headerName === 'The gift of happiness') {
+            setHeaderName('The Gift is Mine');
+        }else {
+            setHeaderName('The gift of happiness');
+        }
+    }
+   
     return (
         <Contents>
             <BannerContainer>
                 <BannerContentBox>
-                    <h1>The gift of happiness</h1>
+                    <h1>{headerName}</h1>
                     <p>Show your gratitude with one of our gift sets, large and small, specially designed to spread joy to someone you love.</p>
-                    <Button content="SHOP NOW" style="banner-button"/>
+                    <Button
+                        content="SHOP NOW" 
+                        style="banner-button" 
+                        onClick={headerChangeHandler} 
+                    />
                 </BannerContentBox>
             </BannerContainer>
             <MainContainer>
